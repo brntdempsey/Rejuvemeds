@@ -14,10 +14,10 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section style={{ paddingTop: 100, paddingLeft: 245, paddingRight: 245, paddingBottom: 100 }}>
+    <section style={{ paddingTop: 100, paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)", paddingBottom: 100 }}>
       <h2
         style={{
-          fontSize: 48,
+          fontSize: "clamp(32px, 2.5vw, 48px)",
           fontFamily: "'Aeonick Pro', sans-serif",
           lineHeight: 1,
           color: "#1A1A1A",

@@ -23,10 +23,10 @@ const cards = [
 
 export default function WhyPeopleChooseUs() {
   return (
-    <section style={{ paddingTop: 100, paddingLeft: 245, paddingBottom:50, backgroundColor:"#FAFAFA" }}>
+    <section style={{ paddingTop: 100, paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)", paddingBottom: 50, backgroundColor: "#FAFAFA" }}>
       <h2
         style={{
-          fontSize: 48,
+          fontSize: "clamp(32px, 2.5vw, 48px)",
           fontFamily: "'Aeonick Pro', sans-serif",
           lineHeight: 1,
           color: "#1A1A1A",
@@ -48,13 +48,13 @@ export default function WhyPeopleChooseUs() {
         Doctor-prescribed treatment based on the latest medical
         research, tailored to your health needs.
       </p>
-      <div className="flex" style={{ marginTop: 40, gap: 24 }}>
+      <div className="flex flex-wrap" style={{ marginTop: 40, gap: 24 }}>
         {cards.map((card, index) => (
-          <div key={index} style={{ width: 460 }}>
+          <div key={index} style={{ flex: "1 1 300px", maxWidth: 460 }}>
             <div
               style={{
-                width: 460,
-                height: 539,
+                width: "100%",
+                aspectRatio: "460/539",
                 borderRadius: 10,
                 overflow: "hidden",
                 backgroundColor: "#F2EEE6",
@@ -66,8 +66,8 @@ export default function WhyPeopleChooseUs() {
                 width={460}
                 height={698}
                 style={{
-                  width: 460,
-                  height: 698,
+                  width: "100%",
+                  height: "100%",
                   objectFit: "cover",
                 }}
               />

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+:root {
+  --section-px: clamp(20px, calc(19.18vw - 123px), 245px);
+  --section-px-right: clamp(20px, calc(19.18vw - 123px), 245px);
+}
+
 @keyframes marquee {
   0% {
     transform: translateX(0);

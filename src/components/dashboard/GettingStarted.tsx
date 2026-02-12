@@ -21,11 +21,11 @@ const steps = [
 
 export default function GettingStarted() {
   return (
-    <section className="w-full" style={{ paddingLeft: 245, paddingRight: 245, paddingBottom:100 }}>
-      <p style={{ paddingTop: 100, fontSize: 72, color: "black", fontFamily: "'Aeonick Pro', sans-serif" }} className="font-bold">
+    <section className="w-full" style={{ paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)", paddingBottom: 100 }}>
+      <p style={{ paddingTop: 100, fontSize: "clamp(40px, 3.75vw, 72px)", color: "black", fontFamily: "'Aeonick Pro', sans-serif" }} className="font-bold">
         Getting Started is Easy.
       </p>
-      <p style={{ fontSize: 30, color: "#202020", fontFamily: "'Aeonick Pro', sans-serif" }}>
+      <p style={{ fontSize: "clamp(18px, 1.56vw, 30px)", color: "#202020", fontFamily: "'Aeonick Pro', sans-serif" }}>
         Our seamless process connects you to real providers<br />from the comfort of home.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: 20, marginTop: 50 }}>
@@ -43,19 +43,20 @@ export default function GettingStarted() {
           >
             <span
               style={{
-                fontSize: 150,
+                fontSize: "clamp(80px, 7.8vw, 150px)",
                 color: "#20514C",
                 fontFamily: "'Aeonick Pro', sans-serif",
-                lineHeight: 0.85
+                lineHeight: 0.85,
+                flexShrink: 0,
               }}
               className="font-bold"
             >
               {step.number}
             </span>
-            <div style={{ paddingTop: 10 }}>
+            <div style={{ paddingTop: 10, flex: 1, minWidth: 0 }}>
               <p
                 style={{
-                  fontSize: 32,
+                  fontSize: "clamp(22px, 1.67vw, 32px)",
                   color: "black",
                   fontFamily: "'Aeonick Pro', sans-serif",
                 }}
@@ -65,11 +66,10 @@ export default function GettingStarted() {
               </p>
               <p
                 style={{
-                  fontSize: 20,
+                  fontSize: "clamp(14px, 1.05vw, 20px)",
                   color: "#202020",
                   fontFamily: "'Aeonick Pro', sans-serif",
                   marginTop: 8,
-                  paddingRight:150,
                   lineHeight: 1.5,
                 }}
               >

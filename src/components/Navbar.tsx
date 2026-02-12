@@ -14,8 +14,8 @@ const navItems = [
 export default function Navbar() {
   return (
     <nav className="fixed top-0 left-0 w-full z-50" style={{ backgroundColor: "#20514C", height: 100, fontFamily: "'Aeonick Pro', sans-serif" }}>
-      <div style={{ paddingRight: 42, paddingTop: 18 }} className="flex items-center h-full">
-        <div style={{ paddingTop: 5, marginRight: 420, marginLeft:42  }}>
+      <div className="flex items-center h-full" style={{ paddingRight: "clamp(20px, 3vw, 42px)", paddingTop: 18 }}>
+        <div style={{ paddingTop: 5, marginLeft: "clamp(20px, 3vw, 42px)", marginRight: "clamp(20px, 22vw, 420px)", flexShrink: 0 }}>
           <Link href="/">
             <Image
               src="/images/logo.svg"
@@ -27,14 +27,14 @@ export default function Navbar() {
             />
           </Link>
         </div>
-        <div style={{ paddingTop: 20, paddingBottom: 20 }}>
-          <ul className="flex items-center gap-6">
+        <div className="flex-1 overflow-hidden" style={{ paddingTop: 20, paddingBottom: 20 }}>
+          <ul className="flex items-center" style={{ gap: "clamp(12px, 2.5vw, 50px)" }}>
             {navItems.map((item) => (
               <li key={item}>
                 <Link
                   href="#"
                   className="font-medium hover:opacity-80 transition-colors whitespace-nowrap"
-                  style={{ color: "grey", fontSize: 24, marginRight: 50}}
+                  style={{ color: "grey", fontSize: "clamp(14px, 1.25vw, 24px)" }}
                 >
                   {item}
                 </Link>
@@ -42,17 +42,16 @@ export default function Navbar() {
             ))}
           </ul>
         </div>
-        <div className="ml-auto flex items-center gap-4" style={{marginRight:42}}>
-          
+        <div className="ml-auto flex items-center gap-4 shrink-0">
           <button
-            style={{ width: 117, height: 64, color: "white" }}
-            className="font-bold bg-transparent cursor-pointer"
+            style={{ height: 64, color: "white", paddingLeft: 12, paddingRight: 12 }}
+            className="font-bold bg-transparent cursor-pointer whitespace-nowrap"
           >
             Log In
           </button>
           <button
-            style={{ width: 150, height: 64, fontSize: 20, backgroundColor: "white", color: "black", marginRight:25, borderRadius: 10 }}
-            className="font-bold cursor-pointer"
+            style={{ height: 64, fontSize: "clamp(14px, 1.05vw, 20px)", backgroundColor: "white", color: "black", borderRadius: 10, paddingLeft: 20, paddingRight: 20 }}
+            className="font-bold cursor-pointer whitespace-nowrap"
           >
             Get Started
           </button>

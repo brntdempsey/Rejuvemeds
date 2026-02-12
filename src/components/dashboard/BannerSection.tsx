@@ -5,18 +5,18 @@ export default function BannerSection() {
     <section
       className="w-full"
       style={{
-        height: 680,
+        minHeight: 880,
         backgroundImage: "url('/images/dashboard/banner/1925@3x.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div style={{ paddingTop: 50, paddingLeft: 245 }}>
-        <p style={{ fontSize: 20, color: "#202020", fontFamily: "'Aeonick Pro', sans-serif" }}>
+      <div style={{ paddingTop: 250, paddingLeft: "var(--section-px)" }}>
+        <p style={{ fontSize: "clamp(16px, 1.05vw, 20px)", color: "#202020", fontFamily: "'Aeonick Pro', sans-serif" }}>
           Experience an average of
         </p>
-        <p style={{ fontSize: 72, color: "black", fontFamily: "'Aeonick Pro', sans-serif", fontWeight: 900, letterSpacing: "-0.02em", lineHeight: 1 }}>
+        <p style={{ fontSize: "clamp(36px, 3.75vw, 72px)", color: "black", fontFamily: "'Aeonick Pro', sans-serif", fontWeight: 900, letterSpacing: "-0.02em", lineHeight: 1 }}>
           15% weight loss<br />in 3 months
         </p>
         <Link

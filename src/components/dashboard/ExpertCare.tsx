@@ -4,17 +4,17 @@ import Image from "next/image";
 export default function ExpertCare() {
   return (
     <section
-      className="w-full flex justify-between"
+      className="w-full flex justify-between flex-wrap"
       style={{
-        height: 661,
+        minHeight: 661,
         backgroundImage: "url('/images/dashboard/image 91.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div style={{ paddingTop: 204, paddingLeft: 245 }}>
-        <p style={{ fontSize: 72, color: "white", fontFamily: "'Aeonick Pro', sans-serif", lineHeight: 1 }} className="font-bold">
+      <div style={{ paddingTop: "clamp(100px, 10.6vw, 204px)", paddingLeft: "var(--section-px)" }}>
+        <p style={{ fontSize: "clamp(36px, 3.75vw, 72px)", color: "white", fontFamily: "'Aeonick Pro', sans-serif", lineHeight: 1 }} className="font-bold">
           Expert Care,<br />Transparent Pricing
         </p>
         <Link
@@ -38,11 +38,11 @@ export default function ExpertCare() {
       </div>
       <div
         style={{
-          width: 410,
-          height: 533,
+          width: "clamp(300px, 21.4vw, 410px)",
+          height: "clamp(400px, 27.8vw, 533px)",
           backgroundColor: "#F2EEE6",
           marginTop: 64,
-          marginRight: 250,
+          marginRight: "var(--section-px)",
           borderRadius: 10,
           display: "flex",
           flexDirection: "column",

@@ -48,16 +48,17 @@ export default function Products() {
   return (
     <section
       style={{
-        height: 748,
+        minHeight: 748,
         backgroundColor: "#FAFAFA",
         paddingTop: 100,
+        paddingBottom: 40,
         position: "relative",
       }}
     >
       <h2
         style={{
-          paddingLeft: 245,
-          fontSize: 48,
+          paddingLeft: "var(--section-px)",
+          fontSize: "clamp(32px, 2.5vw, 48px)",
           fontFamily: "'Aeonick Pro', sans-serif",
           lineHeight: 1,
           color: "#1A1A1A",
@@ -121,7 +122,7 @@ export default function Products() {
           marginTop: 40,
           overflowX: "auto",
           scrollbarWidth: "none",
-          paddingRight: 245,
+          paddingRight: "var(--section-px)",
         }}
       >
         {repeatedProducts.map((product, index) => (

@@ -55,8 +55,8 @@ function ReviewCard({ review }: { review: (typeof reviews)[0] }) {
         borderRadius: 2,
         padding: "30px 24px",
         flexShrink: 0,
-        width: 682,
-        height: 320,
+        width: "clamp(400px, 35.5vw, 882px)",
+        minHeight: 280,
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
@@ -114,10 +114,10 @@ export default function OurMembersLoveUs() {
 
   return (
     <div style={{paddingBottom:60}}>
-      <section style={{ paddingTop: 100, paddingLeft: 245, paddingBottom: 80 }}>
+      <section style={{ paddingTop: 100, paddingLeft: "var(--section-px)", paddingBottom: 80 }}>
         <h2
           style={{
-            fontSize: 48,
+            fontSize: "clamp(32px, 2.5vw, 48px)",
             fontFamily: "'Aeonick Pro', sans-serif",
             lineHeight: 1,
             color: "#1A1A1A",
@@ -169,7 +169,7 @@ export default function OurMembersLoveUs() {
           <ReviewCard key={index} review={review} />
         ))}
       </div>
-      <div style={{paddingLeft:245}}>
+      <div style={{paddingLeft: "var(--section-px)"}}>
         <p
           style={{
             fontSize: 14,

@@ -15,9 +15,8 @@ const cards = [
 export default function HeroCards() {
   return (
     <div
-      className="grid"
+      className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4"
       style={{
-        gridTemplateColumns: "repeat(4, 1fr)",
         gap: 16,
         marginTop: 40,
         width: "100%",
@@ -27,7 +26,6 @@ export default function HeroCards() {
         <div
           key={index}
           style={{
-            height: 435,
             backgroundColor: "#F2EEE6",
             borderRadius: 10,
             padding: 6,
@@ -40,11 +38,11 @@ export default function HeroCards() {
               alt={card.title}
               width={326}
               height={369}
-              style={{ width: "100%", height: 369, borderRadius: 10, objectFit: "cover" }}
+              style={{ width: "100%", height: "auto", aspectRatio: "326/369", borderRadius: 10, objectFit: "cover" }}
             />
             <span
               className="absolute font-bold text-white"
-              style={{ top: 20, left: 30, fontSize: 37, fontFamily: "'Aeonick Pro', sans-serif", lineHeight: 1.1 }}
+              style={{ top: 20, left: 30, fontSize: "clamp(22px, 1.93vw, 37px)", fontFamily: "'Aeonick Pro', sans-serif", lineHeight: 1.1 }}
             >
               {(() => {
                 const spaceIndex = card.title.indexOf(" ");

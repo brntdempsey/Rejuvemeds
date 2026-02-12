@@ -12,9 +12,9 @@ export default function Brands() {
   return (
     <section
       className="w-full flex items-center justify-center"
-      style={{ height: 160, paddingTop: 50, paddingBottom: 50, paddingRight: 200, borderTop: "3px solid #20514C", borderBottom: "3px solid #20514C" }}
+      style={{ minHeight: 160, paddingTop: 50, paddingBottom: 50, paddingRight: "var(--section-px)", borderTop: "3px solid #20514C", borderBottom: "3px solid #20514C" }}
     >
-      <div className="flex items-center justify-between" style={{ width: "100%", paddingLeft: 245 }}>
+      <div className="flex items-center justify-between flex-wrap gap-6" style={{ width: "100%", paddingLeft: "var(--section-px)" }}>
         {brands.map((brand) => (
           <Image
             key={brand.name}

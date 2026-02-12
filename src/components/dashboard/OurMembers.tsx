@@ -33,12 +33,12 @@ const members = [
 
 export default function OurMembers() {
   return (
-    <section className="w-full" style={{ height: 1104, marginBottom : 52}}>
+    <section className="w-full" style={{ marginBottom: 52 }}>
       <p
         style={{
           paddingTop: 100,
-          paddingLeft: 245,
-          fontSize: 72,
+          paddingLeft: "var(--section-px)",
+          fontSize: "clamp(40px, 3.75vw, 72px)",
           color: "black",
           fontFamily: "'Aeonick Pro', sans-serif",
         }}
@@ -49,8 +49,8 @@ export default function OurMembers() {
       <p
         style={{
           paddingTop: 16,
-          paddingLeft: 245,
-          fontSize: 20,
+          paddingLeft: "var(--section-px)",
+          fontSize: "clamp(14px, 1.05vw, 20px)",
           color: "#202020",
           fontFamily: "'Aeonick Pro', sans-serif",
         }}
@@ -63,7 +63,7 @@ export default function OurMembers() {
         className="flex overflow-x-auto hide-scrollbar"
         style={{
           marginTop: 50,
-          paddingLeft: 245,
+          paddingLeft: "var(--section-px)",
           paddingRight: 50,
           gap: 16,
         }}
@@ -72,8 +72,8 @@ export default function OurMembers() {
           <div
             key={index}
             style={{
-              width: 514,
-              height: 738,
+              width: "clamp(320px, 26.8vw, 514px)",
+              minHeight: 600,
               backgroundColor: "#F2EEE6",
               borderRadius: 1,
               padding: 20,
@@ -88,7 +88,8 @@ export default function OurMembers() {
                 height={450}
                 style={{
                   width: "100%",
-                  height: 450,
+                  height: "auto",
+                  aspectRatio: "1/1",
                   borderRadius: 10,
                   objectFit: "cover",
                 }}
@@ -163,7 +164,7 @@ export default function OurMembers() {
       </div>
       <p
         style={{
-          paddingLeft: 245,
+          paddingLeft: "var(--section-px)",
           paddingTop: 30,
           fontSize: 16,
           color: "#202020",

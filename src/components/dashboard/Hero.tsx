@@ -3,7 +3,7 @@ import HeroCards from "@/components/dashboard/HeroCards";
 
 export default function Hero() {
   return (
-    <section className="relative w-full" style={{ paddingTop: 101, paddingLeft: 245, paddingRight: 245 }}>
+    <section className="relative w-full" style={{ paddingTop: 101, paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)" }}>
       <HeroTitle />
       <HeroCards />
     </section>

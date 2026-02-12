@@ -11,9 +11,14 @@ export default function Footer() {
     <footer
       style={{
         backgroundColor: "#20514C",
-        padding: "80px 100px 80px 245px",
+        paddingTop: 80,
+        paddingBottom: 80,
+        paddingLeft: "var(--section-px)",
+        paddingRight: "var(--section-px)",
         display: "flex",
         justifyContent: "space-between",
+        flexWrap: "wrap" as const,
+        gap: 60,
       }}
     >
       <div style={{ maxWidth: 420 }}>
@@ -26,7 +31,7 @@ export default function Footer() {
         />
         <p
           style={{
-            fontSize: 32,
+            fontSize: "clamp(24px, 1.67vw, 32px)",
             color: "white",
             fontFamily: "'Aeonick Pro', sans-serif",
             marginTop: 30,
@@ -80,9 +85,9 @@ export default function Footer() {
       </div>
 
       <div>
-        <div style={{ display: "flex", gap: 80, borderTop: "1px solid grey", paddingTop: 30, paddingRight: 100 , paddingBottom:50}}>
+        <div style={{ display: "flex", gap: "clamp(30px, 4.2vw, 80px)", borderTop: "1px solid grey", paddingTop: 30, paddingBottom: 50, flexWrap: "wrap" as const }}>
           <div style={{ display: "flex", flexDirection: "column", gap: 60 }}>
-            <div style={{ display: "flex", gap: 80 }}>
+            <div style={{ display: "flex", gap: "clamp(30px, 4.2vw, 80px)", flexWrap: "wrap" as const }}>
               <div>
                 <p
                   style={{
@@ -173,7 +178,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div style={{ display: "flex", gap: 80, borderTop: "1px solid grey", paddingTop: 30 }}>
+        <div style={{ display: "flex", gap: "clamp(30px, 4.2vw, 80px)", borderTop: "1px solid grey", paddingTop: 30, flexWrap: "wrap" as const }}>
           <div>
             <p
               style={{
