@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function ExpertCare() {
   return (
     <section
-      className="w-full db-expert-care"
+      className="w-full flex justify-between flex-wrap"
       style={{
         minHeight: "clamp(400px, 34.4vw, 661px)",
         backgroundImage: "url('/images/dashboard/image 91.png')",
@@ -13,21 +13,7 @@ export default function ExpertCare() {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div
-        className="db-expert-care-inner"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          flexWrap: "wrap",
-          maxWidth: 1920,
-          margin: "0 auto",
-          width: "100%",
-          minHeight: "inherit",
-          paddingLeft: "var(--section-px)",
-          paddingRight: "var(--section-px)",
-        }}
-      >
-      <div style={{ paddingTop: "clamp(50px, 10.6vw, 204px)"}}>
+      <div style={{ paddingTop: "clamp(50px, 10.6vw, 204px)", paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)" }}>
         <p style={{ fontSize: "clamp(28px, 3.75vw, 72px)", color: "white", fontFamily: "'Aeonick Pro', sans-serif", lineHeight: 1 }} className="font-bold">
           Expert Care,<br />Transparent Pricing
         </p>
@@ -51,12 +37,13 @@ export default function ExpertCare() {
         </Link>
       </div>
       <div
-        className="db-expert-card"
         style={{
           width: "clamp(240px, 21.4vw, 410px)",
           height: "clamp(320px, 27.8vw, 533px)",
           backgroundColor: "#F2EEE6",
           marginTop: "clamp(24px, 3.3vw, 64px)",
+          marginRight: "var(--section-px)",
+          marginLeft: "var(--section-px)",
           marginBottom: "clamp(24px, 1.6vw, 0px)",
           borderRadius: 10,
           display: "flex",
@@ -93,7 +80,6 @@ export default function ExpertCare() {
             $299/month
           </span>
         </div>
-      </div>
       </div>
     </section>
   );

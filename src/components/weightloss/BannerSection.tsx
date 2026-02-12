@@ -3,22 +3,21 @@ import Link from "next/link";
 export default function BannerSection() {
   return (
     <section
-      className="w-full db-banner-section"
+      className="w-full"
       style={{
         minHeight: "clamp(400px, 45.8vw, 880px)",
-        backgroundColor: "#A8B5C5",
         backgroundImage: "url('/images/dashboard/banner/1925@3x.png')",
-        backgroundSize: "50% auto",
-        backgroundPosition: "right bottom",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="db-banner-section-content" style={{ paddingTop: "clamp(100px, 13vw, 250px)", paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)" }}>
+      <div style={{ paddingTop: "clamp(100px, 13vw, 250px)", paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)" }}>
         <p style={{ fontSize: "clamp(14px, 1.05vw, 20px)", color: "#202020", fontFamily: "'Aeonick Pro', sans-serif" }}>
-          Experience an average of
+          Join 100,0000+ Rejuve patients
         </p>
         <p style={{ fontSize: "clamp(28px, 3.75vw, 72px)", color: "black", fontFamily: "'Aeonick Pro', sans-serif", fontWeight: 900, letterSpacing: "-0.02em", lineHeight: 1 }}>
-          15% weight loss<br />in 3 months
+          Weight Loss, <br />Tailored To You.
         </p>
         <Link
           href="#"
@@ -34,11 +33,10 @@ export default function BannerSection() {
             fontSize: "clamp(16px, 1.05vw, 20px)",
             fontFamily: "'Aeonick Pro', sans-serif",
             marginTop: 30,
-            border: "1px solid rgba(255, 255, 255, 0.35)",
           }}
           className="font-bold"
         >
-          Lose Weight
+          Get Started
         </Link>
       </div>
     </section>

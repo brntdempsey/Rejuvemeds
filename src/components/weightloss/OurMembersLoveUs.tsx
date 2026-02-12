@@ -1,7 +1,5 @@
 "use client";
 
-import { useState } from "react";
-
 const reviews = [
   {
     badge: "36 lbs in 4 months",
@@ -49,7 +47,7 @@ const Stars = () => (
   </div>
 );
 
-function ReviewCard({ review, fullWidth }: { review: (typeof reviews)[0]; fullWidth?: boolean }) {
+function ReviewCard({ review }: { review: (typeof reviews)[0] }) {
   return (
     <div
       style={{
@@ -57,12 +55,11 @@ function ReviewCard({ review, fullWidth }: { review: (typeof reviews)[0]; fullWi
         borderRadius: 2,
         padding: "clamp(16px, 1.6vw, 30px) clamp(16px, 1.25vw, 24px)",
         flexShrink: 0,
-        width: fullWidth ? "100%" : "clamp(280px, 35.5vw, 882px)",
+        width: "clamp(280px, 35.5vw, 882px)",
         minHeight: "clamp(200px, 14.6vw, 280px)",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        
       }}
     >
       <span
@@ -112,7 +109,6 @@ function ReviewCard({ review, fullWidth }: { review: (typeof reviews)[0]; fullWi
 }
 
 export default function OurMembersLoveUs() {
-  const [currentIndex, setCurrentIndex] = useState(0);
   const topRow = reviews.slice(0, 3);
   const bottomRow = reviews.slice(3, 6);
 
@@ -144,9 +140,7 @@ export default function OurMembersLoveUs() {
         </p>
       </section>
 
-      {/* Desktop: two rows */}
       <div
-        className="db-loveus-desktop"
         style={{
           display: "flex",
           gap: "clamp(10px, 0.83vw, 16px)",
@@ -161,14 +155,12 @@ export default function OurMembersLoveUs() {
         ))}
       </div>
       <div
-        className="db-loveus-desktop"
         style={{
           display: "flex",
           gap: "clamp(10px, 0.83vw, 16px)",
           marginTop: "clamp(10px, 0.83vw, 16px)",
           overflowX: "auto",
           scrollbarWidth: "none",
-          paddingLeft: 50,
           paddingRight: "clamp(16px, 2.6vw, 50px)",
         }}
       >
@@ -176,19 +168,6 @@ export default function OurMembersLoveUs() {
           <ReviewCard key={index} review={review} />
         ))}
       </div>
-
-      {/* Mobile: single card slider */}
-      <div
-        className="db-loveus-mobile"
-        style={{
-          display: "none",
-          paddingLeft: 20,
-          paddingRight: 20,
-        }}
-      >
-        <ReviewCard review={reviews[currentIndex]} fullWidth />
-      </div>
-
       <div style={{ paddingLeft: "var(--section-px)" }}>
         <p
           style={{
@@ -201,57 +180,6 @@ export default function OurMembersLoveUs() {
         >
           All Verified Customers Review
         </p>
-        {/* Mobile nav buttons */}
-        <div className="db-loveus-nav" style={{ display: "none", gap: 8, marginTop: 16 }}>
-          <button
-            onClick={() => setCurrentIndex((i) => Math.max(0, i - 1))}
-            disabled={currentIndex === 0}
-            style={{
-              width: 44,
-              height: 36,
-              borderRadius: 4,
-              border: "2px solid #20514C",
-              backgroundColor: "transparent",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: currentIndex === 0 ? "default" : "pointer",
-              opacity: currentIndex === 0 ? 0.3 : 1,
-              fontSize: 16,
-              color: "#20514C",
-              fontFamily: "'Aeonick Pro', sans-serif",
-            }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M19 12H5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M12 19L5 12L12 5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <button
-            onClick={() => setCurrentIndex((i) => Math.min(reviews.length - 1, i + 1))}
-            disabled={currentIndex === reviews.length - 1}
-            style={{
-              width: 44,
-              height: 36,
-              borderRadius: 4,
-              border: "2px solid #20514C",
-              backgroundColor: "transparent",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              cursor: currentIndex === reviews.length - 1 ? "default" : "pointer",
-              opacity: currentIndex === reviews.length - 1 ? 0.3 : 1,
-              fontSize: 16,
-              color: "#20514C",
-              fontFamily: "'Aeonick Pro', sans-serif",
-            }}
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M5 12H19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-              <path d="M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-        </div>
         <div
           style={{
             marginTop: 20,

@@ -12,17 +12,17 @@ const items = [
 
 export default function Banner() {
   return (
-    <section className="w-full overflow-hidden" style={{ marginTop: 100, paddingTop:30, paddingBottom: 30, borderTop: "2px solid #20514C" , backgroundColor:'#F2EEE6'}}>
+    <section className="w-full overflow-hidden db-banner" style={{ marginTop: "clamp(40px, 5.2vw, 100px)", paddingTop: "clamp(16px, 1.6vw, 30px)", paddingBottom: "clamp(16px, 1.6vw, 30px)", borderTop: "2px solid #20514C" }}>
       <div className="flex animate-marquee whitespace-nowrap">
         {[...items, ...items].map((item, index) => (
           <div
             key={index}
             className="flex items-center shrink-0"
-            style={{ paddingRight: 100 }}
+            style={{ paddingRight: "clamp(40px, 5.2vw, 100px)" }}
           >
-            <Image src={item.icon} alt={item.text} width={37} height={38} />
+            <Image src={item.icon} alt={item.text} width={37} height={38} style={{ width: "clamp(24px, 1.9vw, 37px)", height: "auto" }} />
             <span
-              style={{ fontSize: 14, color: "#20514C", fontFamily: "'Aeonick Pro', sans-serif", marginLeft: 8 }}
+              style={{ fontSize: "clamp(11px, 0.73vw, 14px)", color: "#20514C", fontFamily: "'Aeonick Pro', sans-serif", marginLeft: 8 }}
               className="font-medium"
             >
               {item.text}

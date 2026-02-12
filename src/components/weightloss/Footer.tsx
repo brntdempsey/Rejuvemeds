@@ -9,7 +9,7 @@ const legal = ["Terms + Conditions", "Privacy Policy", "Accessibility"];
 export default function Footer() {
   return (
     <footer
-      className="mobile-col db-footer"
+      className="mobile-col"
       style={{
         backgroundColor: "#20514C",
         paddingTop: "clamp(40px, 4.2vw, 80px)",
@@ -38,16 +38,15 @@ export default function Footer() {
             marginTop: "clamp(16px, 1.6vw, 30px)",
             lineHeight: 1.3,
           }}
-          className="font-bold db-footer-tagline"
+          className="font-bold"
         >
           Transform your health,
           <br />
           transform your life.
         </p>
-        <div className="db-footer-buttons" style={{ display: "flex", gap: 12, marginTop: "clamp(20px, 2.1vw, 40px)" }}>
+        <div style={{ display: "flex", gap: 12, marginTop: "clamp(20px, 2.1vw, 40px)" }}>
           <Link
             href="#"
-            className="font-bold db-footer-btn"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -60,12 +59,12 @@ export default function Footer() {
               fontSize: 16,
               fontFamily: "'Aeonick Pro', sans-serif",
             }}
+            className="font-bold"
           >
             Get Started
           </Link>
           <Link
             href="#"
-            className="font-bold db-footer-btn"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -79,6 +78,7 @@ export default function Footer() {
               fontSize: 16,
               fontFamily: "'Aeonick Pro', sans-serif",
             }}
+            className="font-bold"
           >
             Log In
           </Link>
@@ -88,7 +88,7 @@ export default function Footer() {
       <div>
         <div style={{ display: "flex", gap: "clamp(20px, 4.2vw, 80px)", borderTop: "1px solid grey", paddingTop: 30, paddingBottom: "clamp(24px, 2.6vw, 50px)", flexWrap: "wrap" as const }}>
           <div style={{ display: "flex", flexDirection: "column", gap: "clamp(30px, 3.1vw, 60px)" }}>
-            <div className="db-footer-links" style={{ display: "flex", gap: "clamp(20px, 4.2vw, 80px)", flexWrap: "wrap" as const }}>
+            <div style={{ display: "flex", gap: "clamp(20px, 4.2vw, 80px)", flexWrap: "wrap" as const }}>
               <div>
                 <p
                   style={{
@@ -179,7 +179,7 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="db-footer-links" style={{ display: "flex", gap: "clamp(20px, 4.2vw, 80px)", borderTop: "1px solid grey", paddingTop: 30, flexWrap: "wrap" as const }}>
+        <div style={{ display: "flex", gap: "clamp(20px, 4.2vw, 80px)", borderTop: "1px solid grey", paddingTop: 30, flexWrap: "wrap" as const }}>
           <div>
             <p
               style={{

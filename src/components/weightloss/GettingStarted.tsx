@@ -21,12 +21,12 @@ const steps = [
 
 export default function GettingStarted() {
   return (
-    <section className="w-full db-getting-started" style={{ paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)", paddingBottom: "clamp(50px, 5.2vw, 100px)" }}>
-      <p style={{ paddingTop: "clamp(50px, 5.2vw, 100px)", fontSize: "clamp(28px, 3.75vw, 72px)", color: "black", fontFamily: "'Aeonick Pro', sans-serif" }} className="font-bold db-getting-started-title">
+    <section className="w-full" style={{ paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)", paddingBottom: "clamp(50px, 5.2vw, 100px)" }}>
+      <p style={{ paddingTop: "clamp(50px, 5.2vw, 100px)", fontSize: "clamp(28px, 3.75vw, 72px)", color: "black", fontFamily: "'Aeonick Pro', sans-serif" }} className="font-bold">
         Getting Started is Easy.
       </p>
       <p style={{ fontSize: "clamp(14px, 1.56vw, 30px)", color: "#202020", fontFamily: "'Aeonick Pro', sans-serif" }}>
-        Our seamless process connects you to real providers<br/> from the comfort of home.
+        Our seamless process connects you to real providers from the comfort of home.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: "clamp(12px, 1vw, 20px)", marginTop: "clamp(24px, 2.6vw, 50px)" }}>
         {steps.map((step) => (

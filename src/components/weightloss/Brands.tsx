@@ -11,10 +11,10 @@ const brands = [
 export default function Brands() {
   return (
     <section
-      className="w-full flex items-center justify-center db-brands"
+      className="w-full flex items-center justify-center"
       style={{ minHeight: "clamp(80px, 8.3vw, 160px)", paddingTop: "clamp(24px, 2.6vw, 50px)", paddingBottom: "clamp(24px, 2.6vw, 50px)", paddingRight: "var(--section-px)", borderTop: "3px solid #20514C", borderBottom: "3px solid #20514C" }}
     >
-      <div className="flex items-center justify-between flex-wrap db-brands-row" style={{ width: "100%", paddingLeft: "var(--section-px)", gap: "clamp(12px, 1.6vw, 24px)" }}>
+      <div className="flex items-center justify-between flex-wrap" style={{ width: "100%", paddingLeft: "var(--section-px)", gap: "clamp(12px, 1.6vw, 24px)" }}>
         {brands.map((brand) => (
           <Image
             key={brand.name}

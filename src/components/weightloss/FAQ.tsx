@@ -39,7 +39,6 @@ export default function FAQ() {
               display: "flex",
               alignItems: "center",
               justifyContent: "space-between",
-              height:116
             }}
           >
             <span

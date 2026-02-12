@@ -3,6 +3,15 @@
 :root {
   --section-px: clamp(20px, calc(19.18vw - 123px), 245px);
   --section-px-right: clamp(20px, calc(19.18vw - 123px), 245px);
+  --navbar-height: 100px;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-px: 20px;
+    --section-px-right: 20px;
+    --navbar-height: 72px;
+  }
 }
 
 @keyframes marquee {
@@ -25,4 +34,333 @@
 .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Weight Loss Product Card hover effect */
+.wl-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0px 12px 26px rgba(0, 0, 0, 0.08);
+}
+
+/* Mobile utility classes */
+@media (max-width: 480px) {
+  .mobile-hidden {
+    display: none !important;
+  }
+
+  .mobile-col {
+    flex-direction: column !important;
+  }
+
+  .mobile-full-width {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* Navbar mobile */
+  .navbar-main {
+    background-color: #2F5B4E !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  .navbar-logo {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+    transform: scale(1.12);
+    transform-origin: left center;
+  }
+
+  .mobile-nav-right {
+    display: flex !important;
+  }
+
+  .mobile-nav-overlay {
+    display: flex !important;
+  }
+
+  /* Hero section mobile */
+  .hero-section {
+    background-color: #F4F3F1 !important;
+    padding-top: 56px !important;
+    padding-bottom: 48px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  /* Hero subtitle mobile */
+  .hero-subtitle {
+    font-size: 13px !important;
+    color: #6F6F6F !important;
+    letter-spacing: 0.3px !important;
+    margin-bottom: 18px !important;
+    padding-top: 0 !important;
+  }
+
+  /* Hero headings mobile */
+  .hero-heading-gold {
+    font-size: 36px !important;
+    font-weight: 600 !important;
+    color: #C78A3B !important;
+    margin-top: 0 !important;
+    letter-spacing: -0.3px !important;
+  }
+
+  .hero-heading-dark {
+    font-size: 38px !important;
+    font-weight: 700 !important;
+    color: #000000 !important;
+    margin-top: 6px !important;
+    line-height: 1.15 !important;
+  }
+
+  /* Mobile feature row below Tailored to You */
+  .mobile-badges {
+    display: flex !important;
+  }
+
+  /* Hero cards: hide grid, show slide on mobile */
+  .hero-cards-grid {
+    display: none !important;
+  }
+
+  .hero-cards-slide {
+    display: flex !important;
+  }
+
+  .hero-slide-nav {
+    display: flex !important;
+  }
+
+  /* Weight Loss Products: single column on mobile */
+  .wl-products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* ===== Dashboard Components Mobile Overrides ===== */
+
+  /* Banner marquee */
+  .db-banner {
+    margin-top: 0 !important;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    border-top-width: 1px !important;
+  }
+
+  /* BannerSection - background image hero */
+  .db-banner-section {
+    min-height: 486px !important;
+    height: 486px !important;
+    background-position: right bottom !important;
+    background-size: 75% auto !important;
+  }
+
+  .db-banner-section-content {
+    padding-top: 60px !important;
+  }
+
+  /* GettingStarted */
+  .db-getting-started {
+    padding-bottom: 40px !important;
+  }
+
+  .db-getting-started-title {
+    padding-top: 40px !important;
+    font-size: 32px !important;
+    line-height: 1.05 !important;
+  }
+
+  .getting-started-step {
+    flex-direction: column !important;
+    gap: 4px !important;
+  }
+
+  /* Brands logos row */
+  .db-brands {
+    padding-top: 16px !important;
+    padding-bottom: 16px !important;
+    min-height: auto !important;
+    border-top-width: 2px !important;
+    border-bottom-width: 2px !important;
+  }
+
+  .db-brands-row {
+    flex-wrap: nowrap !important;
+    overflow-x: auto !important;
+    justify-content: flex-start !important;
+    gap: 24px !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    padding-right: 20px !important;
+  }
+
+  .db-brands-row::-webkit-scrollbar {
+    display: none;
+  }
+
+  .db-brands-row img {
+    width: 80px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* HighFive - background image section */
+  .db-highfive {
+    min-height: 477px !important;
+    height: 477px !important;
+    background-size: cover !important;
+    background-position: center !important;
+  }
+
+  .db-highfive-desc {
+    display: none !important;
+  }
+
+  /* OurMembers section */
+  .db-our-members {
+    margin-bottom: 16px !important;
+  }
+
+  .db-members-desktop {
+    display: none !important;
+  }
+
+  .db-members-mobile {
+    display: block !important;
+  }
+
+  .db-members-nav {
+    display: flex !important;
+  }
+
+  /* ExpertCare - background image + pricing card */
+  .db-expert-care {
+    min-height: 813px !important;
+    height: 813px !important;
+    padding-right: 0 !important;
+  }
+
+  .db-expert-care-inner {
+    flex-direction: column !important;
+    align-items: center !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .db-expert-card {
+    width: 390px !important;
+    height: 507px !important;
+    margin-bottom: 20px !important;
+    padding: 30px !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+  }
+
+  .db-expert-card > div {
+    padding: 0 !important;
+  }
+
+  .db-expert-card img {
+    width: 166px !important;
+    height: 310px !important;
+  }
+
+  /* WhyPeopleChooseUs cards grid */
+  .db-why-section {
+    padding-top: 40px !important;
+    padding-bottom: 40px !important;
+  }
+
+  .db-why-grid {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .db-why-grid > div {
+    max-width: 100% !important;
+    width: 387px !important;
+    flex: none !important;
+  }
+
+  .db-why-img {
+    aspect-ratio: 1/1 !important;
+  }
+
+  .db-why-grid h3 {
+    font-size: 16px !important;
+    margin-top: 12px !important;
+  }
+
+  .db-why-grid p {
+    font-size: 13px !important;
+    max-width: 100% !important;
+  }
+
+  /* OurMembersLoveUs */
+  .db-loveus-desktop {
+    display: none !important;
+  }
+
+  .db-loveus-mobile {
+    display: block !important;
+  }
+
+  .db-loveus-mobile > div {
+    width: 396px !important;
+    min-height: 416px !important;
+    padding: 32px !important;
+    border-radius: 10px !important;
+    gap: 24px !important;
+  }
+
+  .db-loveus-nav {
+    display: flex !important;
+  }
+
+  /* Products */
+  .db-products {
+    padding-left: 27px !important;
+  }
+
+  .db-products-overlay-btn {
+    display: none !important;
+  }
+
+  .db-products-nav {
+    display: flex !important;
+  }
+
+  .db-products-title {
+    font-size: 43px !important;
+  }
+
+  /* Footer */
+  .db-footer {
+    gap: 24px !important;
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+
+  .db-footer-buttons {
+    flex-direction: column !important;
+  }
+
+  .db-footer-btn {
+    width: 100% !important;
+  }
+
+  .db-footer-links {
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .db-footer-tagline {
+    font-size: 32px !important;
+  }
+
+  .db-footer-links p {
+    font-size: 20px !important;
+    font-weight: 700 !important;
+  }
 }

@@ -23,7 +23,7 @@ const cards = [
 
 export default function WhyPeopleChooseUs() {
   return (
-    <section className="db-why-section" style={{ paddingTop: "clamp(50px, 5.2vw, 100px)", paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)", paddingBottom: "clamp(24px, 2.6vw, 50px)", backgroundColor: "#FAFAFA" }}>
+    <section style={{ paddingTop: "clamp(50px, 5.2vw, 100px)", paddingLeft: "var(--section-px)", paddingRight: "var(--section-px)", paddingBottom: "clamp(24px, 2.6vw, 50px)", backgroundColor: "#FAFAFA" }}>
       <h2
         style={{
           fontSize: "clamp(24px, 2.5vw, 48px)",
@@ -48,11 +48,10 @@ export default function WhyPeopleChooseUs() {
         Doctor-prescribed treatment based on the latest medical
         research, tailored to your health needs.
       </p>
-      <div className="flex flex-wrap db-why-grid" style={{ marginTop: "clamp(20px, 2.1vw, 40px)", gap: "clamp(16px, 1.25vw, 24px)" }}>
+      <div className="flex flex-wrap" style={{ marginTop: "clamp(20px, 2.1vw, 40px)", gap: "clamp(16px, 1.25vw, 24px)" }}>
         {cards.map((card, index) => (
           <div key={index} style={{ flex: "1 1 calc(min(300px, 100%))", maxWidth: 460 }}>
             <div
-              className="db-why-img"
               style={{
                 width: "100%",
                 aspectRatio: "460/539",
